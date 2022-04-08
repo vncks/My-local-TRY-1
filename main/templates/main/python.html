@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    {% if langs %}
+        {% for el in langs %}
+            <div class="alert alert-warning mt-2">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.langs }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No Langs here</p>
+    {% endif %}
+{% endblock %}
