@@ -1,5 +1,5 @@
 from .models import Notes
-from django.forms import  ModelForm, TextInput, Textarea
+from django.forms import ModelForm, TextInput, Textarea
 
 
 class NotesForm(ModelForm):
