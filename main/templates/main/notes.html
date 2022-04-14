@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    {% if langs %}
-        {% for el in langs %}
-            <div class="alert alert-warning mt-2">
+    {% if notes %}
+        {% for el in notes %}
+            <div class="alert alert-warning mt-5">
                 <h3>{{ el.title }}</h3>
-                <p>{{ el.langs }}</p>
+                <p>{{ el.notes }}</p>
             </div>
         {% endfor %}
     {% else %}
