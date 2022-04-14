@@ -5,7 +5,7 @@ from django.forms import  ModelForm, TextInput, Textarea
 class NotesForm(ModelForm):
     class Meta:
         model = Notes
-        fields = ['title', 'langs']
+        fields = ['title', 'notes']
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',

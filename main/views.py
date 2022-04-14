@@ -11,6 +11,7 @@ def python(request):
     notes = Notes.objects.order_by('title')
     return render(request, 'main/notes.html', {'title': 'NOTES TEMPLATE', 'notes': notes})
 
+
 def add(request):
     error = ''
     if request.method == 'POST':
