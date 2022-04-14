@@ -11,7 +11,7 @@ class NotesForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Input the name of your note'
             }),
-            "langs": Textarea(attrs={
+            "notes": Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Write the note'
             }),
