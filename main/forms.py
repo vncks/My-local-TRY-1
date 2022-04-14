@@ -1,19 +1,19 @@
-from .models import Langs
+from .models import Notes
 from django.forms import  ModelForm, TextInput, Textarea
 
 
-class LangsForm(ModelForm):
+class NotesForm(ModelForm):
     class Meta:
-        model = Langs
+        model = Notes
         fields = ['title', 'langs']
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Input your Lang'
+                'placeholder': 'Input the name of your note'
             }),
             "langs": Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Write the description'
+                'placeholder': 'Write the note'
             }),
 
         }

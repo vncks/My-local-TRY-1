@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Langs
+from .models import Notes
 
 
-admin.site.register(Langs)
+admin.site.register(Notes)

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Langs
-from .forms import LangsForm
+from .models import Notes
+from .forms import NotesForm
 
 
 def page(request):
@@ -8,20 +8,20 @@ def page(request):
 
 
 def python(request):
-    langs = Langs.objects.order_by('title')
-    return render(request, 'main/python.html', {'title': 'LANGS TEMPLATE', 'langs': langs})
+    notes = Notes.objects.order_by('title')
+    return render(request, 'main/notes.html', {'title': 'NOTES TEMPLATE', 'notes': notes})
 
 def add(request):
     error = ''
     if request.method == 'POST':
-        form = LangsForm(request.POST)
+        form = NotesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('langs')
+            return redirect('notes')
         else:
             error = "You're wrote the wrong form"
 
-    form = LangsForm
+    form = NotesForm
     context = {
         'form': form,
         'error': error
